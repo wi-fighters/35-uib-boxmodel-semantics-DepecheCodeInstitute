@@ -1,25 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Semantic Elements</title>
 </head>
+
 <body>
-    <header>Practice using semantic elements,with a particular nod to "a11y"</header>
-    <h1>What are some of my goals for this exercise?</h1>
+    <header>
+        <nav>
+            Nav usually belongs in a header section.
+
+            NB: nav is a feature only available in HTML5, <abbr title="'Accessible Rich Internet Applications'.>ARIA²</abbr>   role attributes fill in the gap elsewhere, i.e.
+            role="navigation"</nav>
+    </header>
+    <h1>This page is for practice using valid semantic elements, with a particular nod to <a href="http://mds.is/a11y/">"a11y"</a> (for more on web accessibililty, see also <a href="https://a11yproject.com/">a11yproject</a>).</h1>
     <h2>Knowledge and tools with which I would like to demonstrate and experiment:
         <ul>
-            <li>proper use of semantic elements, i.e. nav bar, button, aside, article, input labels </li>
-            <li>using alt text and titles for contextually important imgs</li>
-            <li>using css for decorative-only images</li>
-            <li>using descriptive anchor txt (rather than just "click me")</li>
-            <li>inform users when certain events trigger, i.e. when a new window will be opened, i.e. "(opens in new tab/powerpoint)", etc</li>
-            <li>use meaningful text labels for input fields</li>
-            <li>practise using css to style elements</li>
+            <li>proper use of semantic elements, i.e. nav bar, button, aside, article, input labels NB: built-in HTML elements often have native keyboard accessibility -> move info to appropriate section <input type="checkbox" id="exercise-checklist">
+            </li>
+
+            <li>using descriptive anchor txt (rather than just "click me") <input type="checkbox" id="exercise-checklist"></li>
+
+            <li>using alt text and titles for contextually important imgs <input type="checkbox" id="exercise-checklist"></li>
+
+            <li>using css for decorative-only images <input type="checkbox" id="exercise-checklist"></li>
+
+            <li>inform users when certain events trigger, i.e. when a new window will be opened, i.e. "(opens in new tab/powerpoint)", etc <input type="checkbox" id="exercise-checklist"></li>
+
+            <li>use meaningful text labels for input fields <input type="checkbox" id="exercise-checklist"></li>
+
+            <li>use ARIA attribute values when native HTML features are not available, particular with nested divs <input type="checkbox" id="exercise-checklist"></li>
+
+            <li>practise using css to style element <input type="checkbox" id="exercise-checklist"></li>
 
         </ul>
     </h2>
 
+    <aside>  Insert Fun Fact here in an Aside <img src="./image/semantic-elements-graphic.gif" alt="a simple graphic illustrating semantic html elements"></aside>
+
+    <footer>
+        <p>This is my footer:<blockquote> This is a &lt;blockquote&gt; I'm fiddling around with, though this quote is certainly too short to justify it, it's a cool trick: "a page footer... typically contains the copyright, legal notices and sometimes some links — or section footer, containing perhaps the section's publication date, license information, etc. See <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines"> Using HTML Sections and Outlines (links to MDN page in new tab)</a> for more information.¹</blockquote></p>
+        <p>¹ Using meaningful link text particularly helps screen-writer users. While it is generally advised to avoid opening links in new tabs, it is good practice to at least notify the user when we do; this can be of help to users with sight and cognitive impairments, and as always actually helps most users overall. See <a href="https://a11yproject.com/posts/creating-valid-and-accessible-links/">Creating Valid and Accessible Links</a> for more information.</p></p>
+        <p>² Ironically, this <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/title"><em>global title attribute</em></a> explaining what ARIA stands for is not accessibility-friendly: <q>if you want to hide content from mobile and tablet users as well as assistive tech users and keyboard only users, use the title attribute.</q> — The Paciello Group blog. See <a href="https://inclusive-components.design/tooltips-toggletips/">Tooltips and Toggletips</a> for more information.</p>
+        <p>There are other ways to create a auxillary description tool-tip that is more accessible, something to do with &lt;aria-describedby=""&gt; and &lt;role="tooltip" id=""&gt; but I am still working that out.</p>
+    <footer>
 </body>
+
 </html>
