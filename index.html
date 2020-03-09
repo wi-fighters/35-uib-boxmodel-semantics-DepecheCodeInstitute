@@ -9,31 +9,27 @@
 
 <body>
     <header>
+        THIS IS A HEADER ELEMENT.
         <nav>
-            Nav usually belongs in a header section.
-
-            NB: nav is a feature only available in HTML5, <abbr title="'Accessible Rich Internet Applications'">ARIA</abbr><a href="#footnote-1">[1]</a> role attributes fill in the gap elsewhere, i.e.
-            role="navigation".</nav>
+            THIS IS MY NAV SECTION. It usually belongs in a header section. The nav feature is only available in HTML5, though there are some <abbr title="'Accessible Rich Internet Applications'">ARIA</abbr><a href="#footnote-1">[1]</a> role attributes to fill in the gap elsewhere, i.e.
+            role&#61<q>navigation</q>.</nav>
             <!-- experiment with aria role attributes work -->
             <!-- maybe create actually functional nav bar? -->
-            <!-- get hyperlinks to footnotes to link to more of an eye level? -->
     </header>
-    <h1>This page is for my practice using valid semantic elements, with a particular nod to <a href="http://mds.is/a11y/">"a11y"</a>. For more on web accessibility, see also <a href="https://a11yproject.com/">a11yproject</a>).</h1>
+    <h1>This page is for my practice using valid semantic elements, with a particular nod to <a href="http://mds.is/a11y/"><q>a11y</q></a>. It is important to use built-in HTML elements where possible, as they generally offer better code structure and transparency, and often come with cool built-in features like native keyboard accessibility. For more on web accessibility, see also <a href="https://a11yproject.com/">a11yproject</a>).</h1>
     <h2>Knowledge and tools with which I would like to experiment:</h2>
-        <ul>
-            <li>proper use of semantic elements, i.e. nav bar, button, aside, article, input labels NB: built-in HTML elements often have native keyboard accessibility -> move info to appropriate section <input type="checkbox" id="exercise-checklist">
+        <ul> THIS IS AN UNTITLED LIST
+            <li>proper use of semantic elements, i.e. nav bar, button, aside, article, input labels, etc. <input type="checkbox" id="exercise-checklist">
             </li>
 
             <li>checkboxes, apparently<input type="checkbox" id="exercise-checklist">
             </li>
 
-            <li>using descriptive anchor txt (rather than just "click me") <input type="checkbox" id="exercise-checklist"></li>
+            <li>using descriptive anchor txt (rather than just <q>click me</q>), and notify users when a new tab will be opened <input type="checkbox" id="exercise-checklist"></li>
+
+            <li>inform users when certain events trigger, i.e. when a new window will be opened, i.e. a new tab/powerpoint, etc <input type="checkbox" id="exercise-checklist"></li>
 
             <li>using alt text and titles for contextually important imgs <input type="checkbox" id="exercise-checklist"></li>
-
-            <li>using css for decorative-only images <input type="checkbox" id="exercise-checklist"></li>
-
-            <li>inform users when certain events trigger, i.e. when a new window will be opened, i.e. "(opens in new tab/powerpoint)", etc <input type="checkbox" id="exercise-checklist"></li>
 
             <li>use meaningful text labels for input fields <input type="checkbox" id="exercise-checklist"></li>
 
@@ -41,17 +37,62 @@
 
             <li>practise using css to style element <input type="checkbox" id="exercise-checklist"></li>
 
+            <li>using css for decorative-only images <input type="checkbox" id="exercise-checklist"></li>
+        </ul>
+    <article> THIS IS AN ARTICLE ELEMENT.
+        The &lt;article&gt; element identifies a self-contained piece of content which could theoretically be distributed to other websites and platforms as a stand-alone unit. The &lt;article&gt; element is a good choice to contain entire blog posts, news articles, and similar content... [while it is] functionally similar to using &lt;div&gt; elements, and the display and styling work the same. However, using the &lt;article&gt; element instead of &lt;div&gt; provides more semantic information to screen readers, search engines, and third-party applications.(<a href="https://html.com/tags/article/#ixzz6FuQvYssl">HTML Article Element: Learn When (And Where) To Use It Now</a>)
+    </article>
+
+      <!-- place button within div so that I can have an adjacent paragraph telling me about the thing? -->
+    <div>
+        <button name="native-button-example-only">THIS IS A NATIVE BUTTON INSIDE A DIV</button>
+        <ul>
+        <li>buttons should be given an accessible name in the &lt;button&gt; element that <q>concisely describes the button's functionality for assistive technologies to access when they parse the document and generate an accessibility tree. Assistive technology then uses the accessibility tree to navigate and manipulate page content</q> (MDN; See <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button">&lt;button&gt;: The Button element</a> for more information).</li>
+        <li>native buttons operate with the Enter key and the Spacebar key, which carries through to javaScript onclick events.</li>
+        <li>to make a button keyboard operable all you need is the onclick event and it works with Enter and Spacebar keys (will give this a try after I learn how to combine js with my html/css)</li>
+        <li>&lt;div role=”button”&gt; controls don’t work with the Enter AND Spacebar keys or they don’t work with the keyboard at all. They’re either skipped right over when tabbing or pressing enter, or spacebar keys have no effect because they only have a mouse-dependent onclick JavaScript event.</li>
+        <li>do not use a button for a link, as they have separate respective button and link roles.</li>
+        <li><q>The reality is that most faux &lt;div&gt; buttons are not keyboard or screen reader accessible at all, and as a developer you’re responsible for implementing the full functionality of the control you use based on its role. So either use native buttons or mimic them completely</q> (Paul J. Adam).</li>
+        <li>See <a href="https://www.deque.com/blog/accessible-aria-buttons/">Accessible ARIA buttons</a> for more information.</li>
         </ul>
 
-    <aside>Insert Fun Fact here in an Aside <img src="./image/semantic-elements-graphic.gif" alt="a simple graphic illustrating semantic html elements"></aside>
-    <!-- do the thing here -->
+    </div>
+    <div class="input-wrapper">
+        <label for="student-id">
+            THIS IS AN INPUT FIELD LABEL: Please enter your student ID number
+        </label>
+        <p id="student-id-hint" class="input-hint">
+            THIS IS AN INPUT HINT WITHIN A &LT;P&GT; ELEMENT: <a href="#footnote-2">[2]</a>
+             This can be found on your Student Card underneath the barcode. For example: <samp>00401653</samp>
+        </p>
+        <input id="student-id" aria-describedby="student-id-hint" name="student-id-number" type="text">
+    </div>
 
+    <aside>THIS IS AN ASIDE ELEMENT.
+        <blockquote>the &lt;aside&gt; element is used to identify content that is related to the primary content of the webpage, but does not constitute the primary content of the page. Author information, related links, related content, and advertisements are exampes[sic] of content that may be found in an aside element (<a href="https://html.com/tags/aside/">HTML5 Aside Element: Here Are The Good (And Not So Good) Uses For It</a>).</blockquote>
+
+    </aside>
+    <img src="./image/semantic-elements-graphic.gif" alt="a simple graphic illustrating semantic html elements">
     <footer>
-        <p>This is my footer:<blockquote> This is a &lt;blockquote&gt; I'm fiddling around with, though this quote is certainly too short to justify it, it's a cool trick: "a page footer... typically contains the copyright, legal notices and sometimes some links — or section footer, containing perhaps the section's publication date, license information, etc. See <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines"> Using HTML Sections and Outlines (links to MDN page in new tab)</a> for more information.<a href="#footnote-2">[2]</a></blockquote></p>
-        <p id="footnote-1"><sup>1</sup> Ironically, this <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/title"><em>global title attribute</em></a> explaining what ARIA stands for is not accessibility-friendly: <q>if you want to hide content from mobile and tablet users as well as assistive tech users and keyboard only users, use the title attribute.</q> — The Paciello Group blog. See <a href="https://inclusive-components.design/tooltips-toggletips/">Tooltips and Toggletips</a> for more information.</p>
-        <p>There are other ways to create a auxillary description tool-tip that is more accessible, something to do with &lt;aria-describedby=""&gt; and &lt;role="tooltip" id=""&gt; but I am still working that out.</p>
-        <p id="footnote-2"><sup>2</sup> Using meaningful link text particularly helps screen-writer users. While it is generally advised to avoid opening links in new tabs, it is good practice to at least notify the user when we do; this can be of help to users with sight and cognitive impairments, and as always actually helps most users overall. See <a href="https://a11yproject.com/posts/creating-valid-and-accessible-links/">Creating Valid and Accessible Links</a> for more information.</p>
+
+        <!-- added class to <p> in order to return here from footnote, still have to complete -->
+
+        <p class="footnote-2">THIS IS MY FOOTER: <q>a page footer... typically contains the copyright, legal notices and sometimes some links — or section footer, containing perhaps the section's publication date, license information, etc.</q> See <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines"> Using HTML Sections and Outlines (links to MDN page in new tab)</a><a href="#footnote-3">[3]</a> for more information.</p>
+        <p id="footnote-1">
+            <sup>1</sup> Ironically, this <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/title"><em>global title attribute</em></a> explaining what ARIA stands for is not accessibility-friendly: <q>if you want to hide content from mobile and tablet users as well as assistive tech users and keyboard only users, use the title attribute</q> (The Paciello Group blog). See <a href="https://inclusive-components.design/tooltips-toggletips/">Tooltips and Toggletips</a> for more information.</p>
+
+            <!-- review formatting for below paragraph -->
+            <p>There are other ways to create a auxillary description tool-tip that is more accessible, something to do with &lt;aria-describedby=""&gt; and &lt;role="tooltip" id=""&gt; but I am still working that out.</p>
+        <p id="#footnote-2">
+            <sup>2</sup> NB: there is no placeholder text. Although placeholder text might look pretty and compact, it is more accessibility-friendly to have clear labels as well as explicit hint-text for a range of reasons: place-holder text does not get picked up by translators or screen-readers, it can cause confusion for less internet-savvy users and it disappears as people type and so the reference is lost (Eric Bailey; see <a href="https://www.smashingmagazine.com/2018/06/placeholder-attribute/#top">Don’t Use The Placeholder Attribute</a> for more information).
+        </p>
+        <p id="footnote-3">
+            <sup>3</sup> While it is generally advised to avoid opening links in new tabs, it is good practice to at least notify the user when we do; this can be of help to users with sight and cognitive impairments, and, as always, actually helps most users overall. If you do not want to have a notice such as <q>(opens to new tab)</q> displayed, consider using a nested tag that is visually hidden for sighted users but still notifies screen reader users, such as &lt;span class='screenreader-text'&gt;(Link opens in a new tab)&lt;/span&gt; See <a href="https://a11yproject.com/posts/creating-valid-and-accessible-links/">Creating Valid and Accessible Links</a> and <a href="http://web-accessibility.carnegiemuseums.org/content/buttons/">Links, Buttons, & Other Clickable Elements</a> for more information.</p>
+
+    <img src="./image/bee-stung-doggo.jpg" alt="a very brave and good doggo who got stung by a bee and now has a puffy snoot but is still smiling" title="this brave and good doggo who got stung by a bee is an example of an important, non-decorative image">
+    <!-- added img at footer end to make hyperlinks to footnotes a bit more intuitive -->
     <footer>
+
 </body>
 
 </html>
