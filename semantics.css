@@ -30,9 +30,11 @@ body {
     padding: 2% 10% 0%;
 }
 
-img {
+.centre__elem {
     display: block;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 2% auto;
+}
+
+img {
     max-width: 100%;
 }

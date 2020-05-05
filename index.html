@@ -51,12 +51,14 @@
 
         <li>use meaningful text labels for input fields <input type="checkbox" id="exercise-checklist-6"></li>
 
+        <li>position input fields and buttons properly in relation to their text labels <input type="checkbox" id="exercise-checklist-7"></li>
+
         <li>use ARIA attribute values when native HTML features are not available, particular with nested divs <input
-                type="checkbox" id="exercise-checklist-7"></li>
+                type="checkbox" id="exercise-checklist-8"></li>
 
-        <li>practise using css to style element <input type="checkbox" id="exercise-checklist-8"></li>
+        <li>practise using css to style element <input type="checkbox" id="exercise-checklist-9"></li>
 
-        <li>using css for decorative-only images <input type="checkbox" id="exercise-checklist-9"></li>
+        <li>using css for decorative-only images <input type="checkbox" id="exercise-checklist-10"></li>
     </ul>
     <article>
         <h2>THIS IS AN ARTICLE ELEMENT. I added a heading because html validator suggested it. </h2>
@@ -71,7 +73,7 @@
 
     <!-- place button within div so that I can have an adjacent paragraph telling me about the thing? -->
     <div>
-        <button name="native-button-example-only">THIS IS A NATIVE BUTTON INSIDE A DIV</button>
+        <button class="centre__elem" name="native-button-example-only">THIS IS A NATIVE BUTTON INSIDE A DIV</button>
         <ul>
             <li>buttons should be given an accessible name in the &lt;button&gt; element that <q>concisely describes the
                     button's functionality for assistive technologies to access when they parse the document and
@@ -97,14 +99,13 @@
 
     </div>
     <div class="input-wrapper">
-        <label for="student-id">
-            THIS IS AN INPUT FIELD LABEL: Please enter your student ID number
-        </label>
+        <input class="centre__elem"  aria-describedby="student-id-hint" name="student-id-number" type="text" placeholder="don't use placeholder txt">
         <p id="student-id-hint" class="input-hint">
-            THIS IS AN INPUT HINT WITHIN A &LT;P&GT; ELEMENT: <a href="#footnote-2">[2]</a>
-            This can be found on your Student Card underneath the barcode. For example: <samp>00401653</samp>
+            THIS IS AN INPUT HINT WITHIN A &LT;P&GT; ELEMENT:
+            This is where you should write explicit hint-text for your input field: <samp>00401653</samp>
+            <a href="#footnote-2">[2]</a>
         </p>
-        <input id="student-id" aria-describedby="student-id-hint" name="student-id-number" type="text">
+
     </div>
 
     <aside>THIS IS AN ASIDE ELEMENT.
@@ -128,7 +129,7 @@
         </p>
 
     </aside>
-    <img src="./image/semantic-elements-graphic.gif" alt="a simple graphic illustrating semantic html elements">
+    <img class="centre__elem" src="./image/semantic-elements-graphic.gif" alt="a simple graphic illustrating semantic html elements">
     <footer>
 
         <!-- added class to <p> in order to return here from footnote, still have to complete -->
@@ -151,8 +152,8 @@
         <!-- review formatting for below paragraph -->
         <p>There are other ways to create a auxillary description tool-tip that is more accessible, something to do with
             &lt;aria-describedby=""&gt; and &lt;role="tooltip" id=""&gt; but I am still working that out.</p>
-        <p id="#footnote-2">
-            <sup>2</sup> NB: there is no placeholder text. Although placeholder text might look pretty and compact, it
+        <p id="footnote-2">
+            <sup>2</sup> Love using a bit of irony to make a point. Although placeholder text might look pretty and compact, it
             is more accessibility-friendly to have clear labels as well as explicit hint-text for a range of reasons:
             place-holder text does not get picked up by translators or screen-readers, it can cause confusion for less
             internet-savvy users and it disappears as people type and so the reference is lost (Eric Bailey; see <a
