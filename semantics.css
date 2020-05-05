@@ -1,0 +1,38 @@
+html {
+    font-size: 100%;
+    /* this honours any font-size settings set by users */
+    font-family: arial, 'Ubuntu Mono', monospace;
+
+}
+
+header {
+    background-color: hsl(97, 62%, 47%, 0.5);
+    text-align: center;
+}
+
+h1  {
+    background-color: hsl(97, 62%, 47%, 0.75);
+    text-align: center;
+}
+
+/* h1, h2 {
+    text-align: center;
+} */
+
+/* adjusting typography in line with guidelines found on https://practicaltypography.com/typography-in-ten-minutes.html */
+
+body {
+    font-size: large;
+    /* font-size: 20px; practical typography recommended 15-25px for online reading */
+    /* buuuut this is not accessibility friendly. see https://betterwebtype.com/articles/2019/06/16/5-keys-to-accessible-web-typography/ */
+    line-height: 1.3;
+    /* note to self: set this up as default style?? */
+    padding: 2% 10% 0%;
+}
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+}
