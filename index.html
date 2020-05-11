@@ -24,14 +24,14 @@
         <!-- maybe create actually functional nav bar? -->
     </header>
     <h1>
-        This page is for my practice using valid semantic elements, with a particular nod to <a target="_blank" rel="noreferrer noopener"
-        href="http://mds.is/a11y/"><q>a11y</q><span class='screenreader-text'>(Link opens in a new tab)</span></a>. It is important to use built-in HTML elements where possible, as they generally offer better code structure and transparency, and often come with cool built-in features like native keyboard accessibility. For more on web accessibility, see also <a target="_blank" rel="noreferrer noopener" href="https://a11yproject.com/">a11yproject</a>).
+        This page is for my practice using valid semantic elements, with a particular nod to <a target="_blank" rel="noreferrer noopener" aria-describedby="new-window-0"
+        href="http://mds.is/a11y/"><q>a11y</q></a>. It is important to use built-in HTML elements where possible, as they generally offer better code structure and transparency, and often come with cool built-in features like native keyboard accessibility. For more on web accessibility, see also <a target="_blank" rel="noreferrer noopener" aria-describedby="new-window-0" href="https://a11yproject.com/">a11yproject</a>).
     </h1>
     <h2>Knowledge and tools with which I would like to experiment:</h2>
     <ul>
-        <li>(THIS IS AN UNTITLED LIST <code>&lt;ul&gt;</code> <a target="_blank" rel="noreferrer noopener" href="https://validator.w3.org/#validate_by_input">Html Validator</a> taught me that it expects certain kinds of child elements, i.e.<q>Zero or more li and script-supporting elements</q>, which meant that I could not just print text after the <code>&lt;ul&gt;</code> nor stick it in a <code>&lt;p&gt;</code> element, either)</li>
+        <li>(THIS IS AN UNTITLED LIST <code>&lt;ul&gt;</code> <a target="_blank" rel="noreferrer noopener" aria-describedby="new-window-0" href="https://validator.w3.org/#validate_by_input">Html Validator</a> taught me that it expects certain kinds of child elements, i.e.<q>Zero or more li and script-supporting elements</q>, which meant that I could not just print text after the <code>&lt;ul&gt;</code> nor stick it in a <code>&lt;p&gt;</code> element, either)</li>
 
-        <li>use of <a target="_blank" rel="noreferrer noopener" href="https://validator.w3.org/#validate_by_input">Html Validator</a> and <a target="_blank" rel="noreferrer noopener" href="https://jigsaw.w3.org/css-validator/#validate_by_input">CSS Validator</a> <input type="checkbox" id="exercise-checklist-0"></li>
+        <li>use of <a target="_blank" rel="noreferrer noopener" aria-describedby="new-window-0" href="https://validator.w3.org/#validate_by_input">Html Validator</a> and <a target="_blank" rel="noreferrer noopener" aria-describedby="new-window-0" href="https://jigsaw.w3.org/css-validator/#validate_by_input">CSS Validator</a> <input type="checkbox" id="exercise-checklist-0"></li>
 
         <li>proper use of semantic elements, i.e. <code>&lt;nav bar&gt;</code>, <code>&lt;button&gt;</code>, <code>&lt;aside&gt;</code>, <code>&lt;article&gt;</code>, <code>&lt;input labels&gt;</code>, etc. <input type="checkbox" id="exercise-checklist-1"></li>
 
@@ -57,14 +57,14 @@
     <article>
         <h2>THIS IS AN ARTICLE ELEMENT. I added a heading because html validator suggested it.</h2>
 
-        The <code>&lt;article&gt;</code> element identifies a self-contained piece of content which could theoretically be distributed to other websites and platforms as a stand-alone unit. The <code>&lt;article&gt;</code> element is a good choice to contain entire blog posts, news articles, and similar content... [while it is] functionally similar to using <code>&lt;div&gt;</code> elements, and the display and styling work the same. However, using the <code>&lt;article&gt;</code> element instead of <code>&lt;div&gt;</code> provides more semantic information to screen readers, search engines, and third-party applications (<a target="_blank" rel="noreferrer noopener" href="https://html.com/tags/article/#ixzz6FuQvYssl">HTML Article Element: Learn When (And Where) To Use It Now</a>).
+        The <code>&lt;article&gt;</code> element identifies a self-contained piece of content which could theoretically be distributed to other websites and platforms as a stand-alone unit. The <code>&lt;article&gt;</code> element is a good choice to contain entire blog posts, news articles, and similar content... [while it is] functionally similar to using <code>&lt;div&gt;</code> elements, and the display and styling work the same. However, using the <code>&lt;article&gt;</code> element instead of <code>&lt;div&gt;</code> provides more semantic information to screen readers, search engines, and third-party applications (<a target="_blank" rel="noreferrer noopener" aria-describedby="new-window-0" href="https://html.com/tags/article/#ixzz6FuQvYssl">HTML Article Element: Learn When (And Where) To Use It Now</a>).
     </article>
 
     <!-- place button within div so that I can have an adjacent paragraph telling me about the thing? -->
     <div>
         <button class="centre__elem" name="native-button-example-only">THIS IS A NATIVE BUTTON INSIDE A DIV</button>
         <ul>
-            <li>buttons should be given an accessible name in the <code>&lt;button&gt;</code> element that <q>concisely describes the button's functionality for assistive technologies to access when they parse the document and generate an accessibility tree. Assistive technology then uses the accessibility tree to navigate and manipulate page content</q> (MDN; See <a target="_blank" rel="noreferrer noopener" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button">&lt;button&gt;: The Button
+            <li>buttons should be given an accessible name in the <code>&lt;button&gt;</code> element that <q>concisely describes the button's functionality for assistive technologies to access when they parse the document and generate an accessibility tree. Assistive technology then uses the accessibility tree to navigate and manipulate page content</q> (MDN; See <a target="_blank" rel="noreferrer noopener" aria-describedby="new-window-0" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button">&lt;button&gt;: The Button
             element</a> for more information)</li>
 
             <li>native buttons operate with the <code>Enter</code> key and the <code>Spacebar</code> key, which carries through to javaScript onclick events</li>
