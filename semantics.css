@@ -1,8 +1,17 @@
 html {
     font-size: 100%;
     /* this honours any font-size settings set by users */
-    font-family: arial, 'Ubuntu Mono', monospace;
+    font-family: 'PT Serif', serif;
+    /* font chosen based on testing with "Illinois", as per "5 Rules for Choosing the Perfect Web Typeface" */
+}
 
+body {
+    font-size: large;
+    /* font-size: 20px; practical typography recommended 15-25px for online reading */
+    /* buuuut this is not accessibility friendly, better to use relative units */
+    line-height: 1.3;
+    /* note to self: set this up as default style?? */
+    padding: 2% 10% 0%;
 }
 
 header {
@@ -15,18 +24,45 @@ h1  {
     text-align: center;
 }
 
-body {
-    font-size: large;
-    /* font-size: 20px; practical typography recommended 15-25px for online reading */
-    /* buuuut this is not accessibility friendly, better to use relative units */
-    line-height: 1.3;
-    /* note to self: set this up as default style?? */
-    padding: 2% 10% 0%;
-}
-
 .centre__elem {
     display: block;
     margin: 2% auto;
+}
+
+a {
+    font-weight: bold;
+    /* My hacky way to get access to solid font-awesome icons off my free account for my non-header elements */
+}
+
+a:link {
+    color: blue;
+}
+a:visited {
+    color: purple;
+}
+a:hover {
+    color: red;
+}
+a:active {
+    color: yellow;
+}
+
+a[target="_blank"]::after {
+    content: ' \f35d';
+    font-family: "Font Awesome 5 Free";
+}
+
+a:link a[target="_blank"]::after {
+    color: blue;
+}
+a:visited a[target="_blank"]::after {
+    color: purple;
+}
+a:hover a[target="_blank"]::after {
+    color: red;
+}
+a:active a[target="_blank"]::after {
+    color: yellow;
 }
 
 img {
