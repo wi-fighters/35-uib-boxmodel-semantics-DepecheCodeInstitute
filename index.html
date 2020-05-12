@@ -10,11 +10,12 @@
     <script src="https://kit.fontawesome.com/830dbf25f4.js" crossorigin="anonymous"></script>
 </head>
 
-<!-- student id input field -->
 <body>
     <div hidden>
         <span id="new-window-0">Opens external site in new window</span>
         <span id="return-to-text">Return to text</span>
+        <span id="student-id-input-field">Input field asking for Student ID</span>
+        <!-- how should I structure these descriptions exactly? As a description of the element like above...? -->
     </div>
     <header>
         THIS IS A HEADER ELEMENT.
@@ -83,7 +84,7 @@
 
     </div>
     <div class="input-wrapper">
-        <input class="centre__elem"  aria-describedby="student-id-hint" name="student-id-number" type="text" placeholder="don't use placeholder txt">
+        <input class="centre__elem"  aria-describedby="student-id-input-field" name="student-id-number" type="text" placeholder="don't use placeholder txt">
         <p id="student-id-hint" class="input-hint">THIS IS AN INPUT HINT WITHIN A <code>&LT;p&GT;</code> ELEMENT: Do not use or rely upon place-holder text<a id="footnote-2-ref" href="#footnote-2">[2]</a>, but instead write explicit hint-text for your <code>&LT;input&GT;</code> field: <samp>00401653</samp>, though maybe not awkwardly underneath the input field like I have done it on this webpage... *Awkward intensifies* </p>
 
     </div>
