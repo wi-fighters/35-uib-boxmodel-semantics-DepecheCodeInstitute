@@ -6,7 +6,7 @@ html {
 }
 
 body {
-    font-size: large;
+    font-size: 1.2em;
     /* font-size: 20px; practical typography recommended 15-25px for online reading */
     /* buuuut this is not accessibility friendly, better to use relative units */
     line-height: 1.3;
